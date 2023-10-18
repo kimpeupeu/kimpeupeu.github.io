@@ -8,6 +8,9 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
+      {% for category in site.categories %}
+        <li><a href="{{category.url}}"><strong>{{category|first}}</strong></a></li>
+      {% endfor %}
       <div class="wrapper">
         {{ content }}
       </div>
